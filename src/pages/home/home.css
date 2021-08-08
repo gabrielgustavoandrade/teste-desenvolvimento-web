@@ -1,4 +1,4 @@
-.App {
+.container {
   text-align: center;
   background: url(/src/assets/pokemon-logo.png) no-repeat;
   background-size: contain;
@@ -12,7 +12,7 @@
   left: 0;
 }
 
-.App-header {
+.content {
   min-height: 100vh;
   display: flex;
   flex-direction: column;

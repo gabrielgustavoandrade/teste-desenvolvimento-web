@@ -1,22 +1,14 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Pokebola from "./components/pokebola"
-import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Pokemons from "./pages/pokemons";
+import Home from "./pages/home";
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <div className="App-header">
-          <Pokebola/>
-        </div>
-      </div>
-      <div>
-        <Switch>
-          <Route path="/about">{/* <About /> */}</Route>
-          <Route path="/topics">{/* <Topics /> */}</Route>
-          <Route path="/">{/* <Home /> */}</Route>
-        </Switch>
-      </div>
+      <Switch>
+        <Route exact path="/pokemons" component={Pokemons} />
+        <Route exact path="/" component={Home} />
+      </Switch>
     </Router>
   );
 }
