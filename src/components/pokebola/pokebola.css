@@ -1,0 +1,124 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.pokebola {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 200px;
+  background: linear-gradient(180deg, rgba(3,3,15,1) 0%, rgba(55,54,57,1) 45%, rgba(124,124,124,1) 100%);
+}
+
+.pokebola-up-side {
+  width: 400px;
+  height: 200px;
+  border-top-left-radius: 200px;
+  border-top-right-radius: 200px;
+  border: 10px solid #000;
+  background-color: #ef4036;
+}
+
+.pokebola:hover > .pokebola-up-side {
+  animation-name: open;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.pokebola-down-side {
+  transform: rotate(180deg);
+  width: 400px;
+  height: 200px;
+  border-top-left-radius: 200px;
+  border-top-right-radius: 200px;
+  border-bottom: 0;
+  background-color: #fff;
+  border: 10px solid #000;
+  box-shadow: inset -10px 10px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.button {
+    display: none;
+    position: absolute;
+    top: calc(50% - 45px);
+    left: calc(50% - 115px);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 255px;
+}
+
+.pokebola:hover > .button {
+    display: flex;
+}
+
+
+.pokebola-buttom {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border: 10px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  z-index: 10;
+}
+
+.pokebola-buttom:before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: 3px solid #000;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.pokebola:hover > .pokebola-buttom {
+  animation-name: openButton;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes open {
+  0% {
+    margin-bottom: 25px;
+  }
+  25% {
+    margin-bottom: 50px;
+  }
+  50% {
+    margin-bottom: 75px;
+  }
+  75% {
+    margin-bottom: 100px;
+  }
+  100% {
+    margin-bottom: 125px;
+  }
+}
+
+@keyframes openButton {
+  0% {
+    top: calc(50% - 50px);
+  }
+  25% {
+    top: calc(50% - 75px);
+  }
+  50% {
+    top: calc(50% - 100px);
+  }
+  75% {
+    top: calc(50% - 125px);
+  }
+  100% {
+    top: calc(50% - 135px);
+  }
+}
